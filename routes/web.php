@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController as AdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['register'=>false]);
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::resource('admin', AdminController::class);
+Route::post('admin/{id}/edit', [AdminController::class, 'methods'])->name('methods');
+Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->name('user');
+Route::resource('user', App\Http\Controllers\UserController::class);

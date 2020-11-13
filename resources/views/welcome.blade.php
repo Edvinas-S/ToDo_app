@@ -20,7 +20,7 @@
                 @if (Route::has('login'))
                     <div class="">
                         @auth
-                            <a href="{{ url('/home') }}" class="btn btn-success btn-lg btn-block">Go to home page</a>
+                            <a href="{{ url('/user') }}" class="btn btn-success btn-lg btn-block">Go to home page</a>
                         @else
                             <a href="{{ route('login') }}" class="btn btn-warning btn-lg btn-block">Login</a>
                         @endif

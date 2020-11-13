@@ -20,10 +20,11 @@
 </head>
 <body>
     <div id="app" class="w-100 h-100">
-        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm d-none">
+        {{-- kažkodėl panaikinus nav bar'ą negaliu atsijungti nuo naudotojo, gaunu 419 Page Expired error'ą, tai kol kas jį tiesiog paslėpiu nuo naudotojo --}}
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    ToDo App
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -54,7 +55,7 @@
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
-                                </a>
+                                </a> 
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -67,12 +68,12 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
+                             </li>
                         @endguest
                     </ul>
                 </div>
             </div>
-        </nav> --}}
+        </nav>
 
         @yield('content')
     </div>

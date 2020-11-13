@@ -147,6 +147,12 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => '"vardas"',
+        'email' => '"elektroninis paštas"',
+        'password' => '"slaptažodis"',
+        'title' => '"užduoties pavadinimas"',
+        'status' => '"pasirinkite būsena"',
+    ],
 
 ];
