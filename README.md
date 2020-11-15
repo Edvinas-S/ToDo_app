@@ -45,7 +45,8 @@ php artisan serve
 
 > Login as Administrator
 >email: **admin@app.com**
->password: **password**
+>password: **password**\
+> to login as User enter **"anyUsername"@app.com** password: **password** (or create new one with Admin rights :).
 
 - :eyes:
 
